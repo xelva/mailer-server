@@ -12,7 +12,8 @@
     "server": "nodemon index.js",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "build": "build client/index.html --dist-dir client/build",
+    "heroku-postbuild": "npm run build"
   },
   "author": "",
   "license": "ISC",
